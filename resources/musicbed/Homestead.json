@@ -6,6 +6,7 @@
     "provider": "virtualbox",
     "authorize": "~/.ssh/id_rsa.pub",
     "keys": ["~/.ssh/id_rsa"],
+    "version": "9.5.1",
     "features": [
         {
             "elasticsearch": {
@@ -26,9 +27,18 @@
         {
             "map": "~/Code/musicbed/laravel-sabre",
             "to": "/home/vagrant/laravel-sabre"
+        },
+        {
+            "map": "~/Code/musicbed/musicbed-www",
+            "to": "/home/vagrant/musicbed-www"
         }
     ],
     "sites": [
+        {
+            "map": "musicbed.test",
+            "to": "/home/vagrant/musicbed/public",
+            "php": "7.3"
+        },
         {
             "map": "admin.musicbed.test",
             "to": "/home/vagrant/musicbed/public",
@@ -54,5 +64,8 @@
             "send": "33061",
             "to": "3306"
         }
+    ],
+    "databases": [
+      "musicbed_testing"
     ]
-}
+  }
