@@ -33,6 +33,8 @@ alias tinker="php artisan tinker"
 alias migrate="php artisan migrate"
 
 function init() {
+    php72
+
     echo "musicbed/musicbed composer install"
     cd ~/musicbed
     composer install
@@ -52,13 +54,13 @@ function init() {
 function reindex() {
     echo "Musicbed Index"
     cd ~/laravel-sabre
-    php7.1 artisan cron:index_data
+    php7.2 artisan cron:index_data
 }
 
 function index() {
     echo "Musicbed Index"
     cd ~/laravel-sabre
-    php7.1 artisan cron:index_data
+    php7.2 artisan cron:index_data
 }
 
 function artisan() {

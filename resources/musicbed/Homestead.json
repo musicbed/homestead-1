@@ -33,17 +33,17 @@
         {
             "map": "admin.musicbed.test",
             "to": "/home/vagrant/musicbed/public",
-            "php": "7.3"
+            "php": "7.2"
         },
         {
             "map": "api3.musicbed.test",
             "to": "/home/vagrant/musicbed-api/public",
-            "php": "7.3"
+            "php": "7.2"
         },
         {
             "map": "sabre.musicbed.test",
             "to": "/home/vagrant/laravel-sabre/public",
-            "php": "7.3"
+            "php": "7.2"
         }
     ],
     "ports": [

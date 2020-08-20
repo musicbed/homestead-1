@@ -27,7 +27,7 @@
         {
             "map": "api.filmsupply.test",
             "to": "/home/vagrant/filmsupply/public/api",
-            "php": "7.0"
+            "php": "7.2"
         },
         {
             "map": "filmsupply.test",

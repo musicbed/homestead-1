@@ -31,6 +31,8 @@ alias tinker="php artisan tinker"
 alias migrate="php artisan migrate"
 
 function init() {
+    php72
+
     echo "musicbed/filmsupply composer install"
     cd ~/filmsupply
     git pull --rebase
@@ -43,13 +45,13 @@ function init() {
 function reindex() {
     echo "Filmsupply Index"
     cd ~/filmsupply
-    php7.0 artisan fs:reindex_models
+    php7.2 artisan fs:reindex_models
 }
 
 function index() {
     echo "Filmsupply Index"
     cd ~/filmsupply
-    php7.0 artisan fs:reindex_models
+    php7.2 artisan fs:reindex_models
 }
 
 function artisan() {
