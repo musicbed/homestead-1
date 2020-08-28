@@ -23,10 +23,10 @@ if ! grep -q "10.1.1.33   sabre.test" "/etc/hosts"; then
 	echo '10.1.1.33   sabre.test' | sudo tee -a /etc/hosts > /dev/null
 fi
 
-if ! grep -q "10.1.1.33   api.filmsupply.test" "/etc/hosts"; then
-	echo '10.1.1.33   api.filmsupply.test' | sudo tee -a /etc/hosts > /dev/null
+if ! grep -q "10.1.1.34   api.filmsupply.test" "/etc/hosts"; then
+	echo '10.1.1.34   api.filmsupply.test' | sudo tee -a /etc/hosts > /dev/null
 fi
 
-if ! grep -q "10.1.1.33   filmsupply.test" "/etc/hosts"; then
-	echo '10.1.1.33   filmsupply.test' | sudo tee -a /etc/hosts > /dev/null
+if ! grep -q "10.1.1.34   filmsupply.test" "/etc/hosts"; then
+	echo '10.1.1.34   filmsupply.test' | sudo tee -a /etc/hosts > /dev/null
 fi
