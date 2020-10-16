@@ -5,7 +5,6 @@
     "cpus": 4,
     "provider": "virtualbox",
     "authorize": "~/.ssh/id_rsa.pub",
-    "version": "9.5.1",
     "keys": [
         "~/.ssh/id_rsa"
     ],
@@ -20,7 +19,8 @@
     "folders": [
         {
             "map": "~/Code/musicbed/filmsupply",
-            "to": "/home/vagrant/filmsupply"
+            "to": "/home/vagrant/filmsupply",
+            "type": "nfs"            
         }             
     ],
     "sites": [
