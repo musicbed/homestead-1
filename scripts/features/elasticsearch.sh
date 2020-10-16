@@ -39,7 +39,7 @@ fi
 
 sudo apt-get update
 sudo apt-get -y install openjdk-11-jre
-sudo apt-get -y install elasticsearch"$installVersion"
+sudo apt-get -y install elasticsearch
 
 # Start Elasticsearch on boot
 
