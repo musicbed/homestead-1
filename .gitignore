@@ -10,5 +10,8 @@ phpunit.xml
 /postgres_backup
 /user-customizations.sh
 .DS_Store
+.phpunit.result.cache
+wsl-init.log
+.backup/*
 /musicbed/*
 /filmsupply/*
