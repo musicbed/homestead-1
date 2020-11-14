@@ -69,7 +69,7 @@ fi
 
 if [ ! -f ~/Code/musicbed/musicbed-www/.env ]; then
 	echo "Adding .env to musicbed-www"
-	curl -o ~/Code/musicbed/musicbed-www/.env https://s3.amazonaws.com/mb-engineering-onboarding/www/.env
+	curl -o ~/Code/musicbed/musicbed-www/.env https://s3.amazonaws.com/mb-engineering-onboarding/musicbed-www/.env
 	if grep -q "AccessDenied" ~/Code/musicbed/musicbed-www/.env; then
 		echo "File not downloaded. Access Denied. Please make sure you are connected to VPN."
 		echo "Cleaning up..."

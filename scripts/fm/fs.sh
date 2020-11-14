@@ -41,20 +41,27 @@ if [ ! -f ~/Code/musicbed/filmsupply/.env ]; then
 	fi
 fi
 
-read -p "Have you ran yarn on filmsupply? y/n" -n 1 -r
-echo    # (optional) move to a new line
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-	cd ~/Code/musicbed/filmsupply
-	yarn
-	cd ~/Homestead
+if [ ! -d ~/Code/musicbed/filmsupply-www ]; then
+	mkdir -p ~/Code/musicbed/filmsupply-www
+	git clone https://github.com/musicbed/filmsupply-www.git ~/Code/musicbed/filmsupply-www
 fi
 
-read -p "Have you ran yarn gulp imagemin on filmsupply? y/n" -n 1 -r
+if [ ! -f ~/Code/musicbed/filmsupply-www/.env ]; then
+	echo "Adding .env to filmsupply-www"
+	curl -o ~/Code/musicbed/filmsupply-www/.env https://s3.amazonaws.com/mb-engineering-onboarding/filmsupply-www/.env
+	if grep -q "AccessDenied" ~/Code/musicbed/filmsupply-www/.env; then
+		echo "File not downloaded. Access Denied. Please make sure you are connected to VPN."
+		echo "Cleaning up..."
+		rm -f ~/Code/musicbed/filmsupply-www/.env
+		exit 1
+	fi
+fi
+
+read -p "Have you ran yarn on filmsupply-www? y/n" -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
-	cd ~/Code/musicbed/musicbed-www
-	yarn gulp imagemin
+	cd ~/Code/musicbed/filmsupply-www
+	yarn
 	cd ~/Homestead
 fi
