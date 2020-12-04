@@ -33,7 +33,7 @@ alias tinker="php artisan tinker"
 alias migrate="php artisan migrate"
 
 function init() {
-    php72
+    php74
 
     echo "musicbed/musicbed composer install"
     cd ~/musicbed
