@@ -9,7 +9,7 @@
     "features": [
         {
             "elasticsearch": {
-                "version": "5"
+                "version": "7"
             },
             "ohmyzsh": true
         }
