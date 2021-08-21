@@ -54,13 +54,13 @@ function init() {
 function reindex() {
     echo "Musicbed Index"
     cd ~/laravel-sabre
-    php7.2 artisan cron:index_data
+    php7.4 artisan cron:index_data --limited
 }
 
 function index() {
     echo "Musicbed Index"
     cd ~/laravel-sabre
-    php7.2 artisan cron:index_data
+    php7.4 artisan cron:index_data --limited
 }
 
 function artisan() {
