@@ -46,13 +46,13 @@ if [ ! -d ~/Code/musicbed/filmsupply-www ]; then
 	git clone https://github.com/musicbed/filmsupply-www.git ~/Code/musicbed/filmsupply-www
 fi
 
-if [ ! -f ~/Code/musicbed/filmsupply-www/.env ]; then
+if [ ! -f ~/Code/musicbed/filmsupply-www/.env.local ]; then
 	echo "Adding .env to filmsupply-www"
-	curl -o ~/Code/musicbed/filmsupply-www/.env https://s3.amazonaws.com/mb-engineering-onboarding/filmsupply-www/.env
-	if grep -q "AccessDenied" ~/Code/musicbed/filmsupply-www/.env; then
+	curl -o ~/Code/musicbed/filmsupply-www/.env.local https://s3.amazonaws.com/mb-engineering-onboarding/filmsupply-www/.env.local
+	if grep -q "AccessDenied" ~/Code/musicbed/filmsupply-www/.env.local; then
 		echo "File not downloaded. Access Denied. Please make sure you are connected to VPN."
 		echo "Cleaning up..."
-		rm -f ~/Code/musicbed/filmsupply-www/.env
+		rm -f ~/Code/musicbed/filmsupply-www/.env.local
 		exit 1
 	fi
 fi
